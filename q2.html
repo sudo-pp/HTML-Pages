@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<title>Question 2</title>
+		<link rel="stylesheet" href="q2.css">
+	</head>
+		
+		<table class="table">
+			<thead class="table-main-h">
+			  <tr>
+				<th class="cell"></th>
+				<th class="cell"> 9-10</th>
+				<th class="cell">10-11</th>
+				<th class="cell">11-12</th>
+				<th class="cell">12-1 </th>
+				<th class="cell"> 1-2 </th>
+				<th class="cell"> 2-3 </th>
+				<th class="cell"> 3-4 </th>
+				<th class="cell"> 4-5 </th>
+				<th class="cell"> 5-6 </th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr class="table-main-v">
+				<td>Monday</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="class" onclick="highlight(this)" >PPL</td>
+				<td rowspan="4" class="class" onclick="highlight(this)">Lunch</td>
+				<td></td>
+				<td></td>
+				<td colspan="2" class="class" onclick="highlight(this)">INTECH</td>
+			  </tr>
+			  <tr class="table-main-v">
+				<td>Tuesday</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="class" onclick="highlight(this)">DBMS</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			  </tr>
+			  <tr class="table-main-v">
+				<td>Wednesday</td>
+				<td></td>
+				<td></td>
+				<td colspan="2" class="class" onclick="highlight(this)">OS</td>
+				<td class="class" onclick="highlight(this)">DBMS</td>
+				<td></td>
+				<td colspan="2" class="class" onclick="highlight(this)">ALGO</td>
+			  </tr>
+			  <tr class="table-main-v">
+				<td>Friday</td>
+				<td></td>
+				<td class="class" onclick="highlight(this)">OS</td>
+				<td></td>
+				<td class="class" onclick="highlight(this)">ALGO</td>
+				<td class="class" onclick="highlight(this)">INTECH</td>
+				<td></td>
+				<td colspan="2" class="class">PPL</td>
+			  </tr>
+			</tbody>
+		</table>
+		
+		
+<script>
+	var buttonState = 0;
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "170px";
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+		}
+		
+		function highlight(elem){
+			if (buttonState == 0){
+				var obj = document.getElementsByTagName(elem.tagName);
+				for (i=0;i<obj.length;i++){
+					obj[i].style = null;
+
+				}
+			}
+			var elemText = elem.innerHTML;
+			var obj = document.getElementsByTagName(elem.tagName);
+			for(i=0; i<obj.length; i++){
+				//console.log(obj[i]);
+				if(obj[i].innerHTML == elemText){
+					obj[i].style.borderColor = "#ff0266";
+				}
+			}			
+			buttonState = 1;
+			//console.log(elemText)
+		}
+</script>
+		
+	</body>
+</html>
