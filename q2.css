@@ -1,0 +1,25 @@
+.table{
+	border: 2px solid #F9F9F9;
+	margin-left:50px;
+	font-size:1em;
+}
+
+.table-main-h th{
+	border: 1.5px solid #E5E5E5;
+	padding:0px 10px 0px 10px;
+}
+
+.table-main-v td {
+	border: 1.5px solid #E5E5E5;
+	padding:0px 5px 0px 5px;
+	text-align: center;
+}
+
+ td.class:hover{
+	border: 1.5px solid #ff0266;
+	cursor: pointer;
+}
+
+td.class:active{
+	border: 1.5px solid #333333;
+}
